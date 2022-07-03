@@ -19,4 +19,13 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Println(message)
+
+	messages, err := greeting.Hellos([]string{"Kent", "Fowler"})
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	for _, msg := range messages {
+		fmt.Println(msg)
+	}
 }
